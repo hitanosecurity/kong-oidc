@@ -53,6 +53,7 @@ function M.get_options(config, ngx)
     scope = config.scope,
     anonymous = config.anonymous,
     response_type = config.response_type,
+    introspection_params = config.introspection_params,
     ssl_verify = config.ssl_verify,
     token_endpoint_auth_method = config.token_endpoint_auth_method,
     recovery_page_path = config.recovery_page_path,

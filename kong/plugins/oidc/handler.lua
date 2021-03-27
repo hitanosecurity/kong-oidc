@@ -14,6 +14,9 @@ end
 function OidcHandler:access(config)
   OidcHandler.super.access(self)
   local oidcConfig = utils.get_options(config, ngx)
+  ngx.log(ngx.DEBUG, "Oidc print strt")
+  ngx.log(ngx.DEBUG, "OIDC CONFIG " .. oidcConfig)
+  ngx.log(ngx.DEBUG, "Oidc print end")
 
   if filter.shouldProcessRequest(oidcConfig) then
     session.configure(config)
