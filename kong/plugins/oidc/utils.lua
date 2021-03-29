@@ -63,6 +63,12 @@ function M.get_options(config, ngx)
   }
 end
 
+function M.get_session_options(config, ngx)
+  return {
+    introspection_params = config.introspection_params
+  }
+end
+
 function M.exit(httpStatusCode, message, ngxCode)
   ngx.status = httpStatusCode
   ngx.say(message)
